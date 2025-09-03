@@ -19,6 +19,13 @@ AAuraEnemy::AAuraEnemy()
 	
 }
 
+void AAuraEnemy::BeginPlay()
+{
+	Super::BeginPlay();
+	AbilitySystemComponent -> InitAbilityActorInfo(this, this);
+	
+}
+
 void AAuraEnemy::HighlightActor()
 {
 	GetMesh() -> SetRenderCustomDepth(true);
@@ -31,3 +38,5 @@ void AAuraEnemy::UnhighlightActor()
 	GetMesh() -> SetRenderCustomDepth(false);
 	Weapon -> SetRenderCustomDepth(false);
 }
+
+
