@@ -98,8 +98,11 @@ void AAuraPlayerController::BeginPlay()
 	check(AuraContext); // Check is AuraContext is Set
 
 	UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(GetLocalPlayer());
-	check(Subsystem);
-	Subsystem -> AddMappingContext(AuraContext, 0);
+	if (Subsystem)
+	{
+		Subsystem -> AddMappingContext(AuraContext, 0);
+	}
+	
 
 
 	/**
