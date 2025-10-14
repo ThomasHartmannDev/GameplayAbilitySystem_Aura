@@ -6,7 +6,7 @@
 #include "AttributeSet.h"
 #include "AuraAbilitySystemComponent.h"
 #include "AuraAttributeSet.generated.h"
-#include "GameplayEffectExtension.h"
+
 
 #define ATTRIBUTE_ACCESSORS(ClassName, PropertyName) \
 	GAMEPLAYATTRIBUTE_PROPERTY_GETTER(ClassName, PropertyName) \
